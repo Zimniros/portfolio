@@ -1,0 +1,41 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $color-black;
+  height: $header-height;
+  width: 100%;
+
+  @include tablet {
+    position: relative;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: $max-width;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  &__logo-box,
+  &__nav {
+    margin: 0 1rem;
+  }
+
+  &__nav {
+    @include tablet {
+      margin: 0;
+    }
+  }
+
+  &__logo {
+    height: 3rem;
+
+    @include tablet {
+      height: 4rem;
+      margin: 0 2rem;
+    }
+  }
+}

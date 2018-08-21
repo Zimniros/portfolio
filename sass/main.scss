@@ -1,14 +1,9 @@
-@import "abstracts/functions";
-@import "abstracts/mixins";
-@import "abstracts/variables";
+@import "variables";
+@import "typography";
+@import "base";
 
-@import "base/animations";
-@import "base/base";
-@import "base/typography";
-@import "base/utilities";
+@import "mixins";
 
-@import "pages/home";
+@import "layout/header";
 
-body {
-  box-sizing: border-box;
-}
+@import "components/nav";
