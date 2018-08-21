@@ -30,12 +30,18 @@
     }
   }
 
-  &__logo {
+  &__logo-box {
     height: 3rem;
+    display: flex;
 
     @include tablet {
       height: 4rem;
       margin: 0 2rem;
     }
+  }
+
+  &__logo {
+    height: 100%;
+    border: none;
   }
 }

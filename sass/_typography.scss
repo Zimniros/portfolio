@@ -1,15 +1,53 @@
 body {
-  font-family: "Playfair Display", serif;
+  font-family: $font-family-basic;
   line-height: 1.7;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Open Sans", sans-serif;
-  letter-spacing: -2px;
-  line-height: 1.2;
+.heading-primary {
+  color: $color-white;
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+  user-select: none;
+
+  &--main {
+    display: block;
+    font-size: 3rem;
+    line-height: 1.2;
+    font-family: $font-family-heading;
+
+    @include large-phone {
+      font-size: 5rem;
+    }
+
+    @include tablet {
+      font-size: 7rem;
+    }
+  }
+
+  &--sub {
+    display: block;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    font-family: $font-family-basic;
+
+    @include large-phone {
+      font-size: 2rem;
+    }
+
+    @include tablet {
+      font-size: 2.5rem;
+    }
+  }
 }
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   font-family: "Open Sans", sans-serif;
+//   letter-spacing: -2px;
+//   line-height: 1.2;
+// }

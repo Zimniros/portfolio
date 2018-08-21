@@ -1,19 +1,39 @@
 /* Colors */
+/* Font Families */
 /* Space */
 /* Breakpoints */
 body {
   font-family: "Playfair Display", serif;
   line-height: 1.7; }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Open Sans", sans-serif;
-  letter-spacing: -2px;
-  line-height: 1.2; }
+.heading-primary {
+  color: #fafafa;
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+  user-select: none; }
+  .heading-primary--main {
+    display: block;
+    font-size: 3rem;
+    line-height: 1.2;
+    font-family: "Open Sans", sans-serif; }
+    @media (min-width: 30em) {
+      .heading-primary--main {
+        font-size: 5rem; } }
+    @media (min-width: 48em) {
+      .heading-primary--main {
+        font-size: 7rem; } }
+  .heading-primary--sub {
+    display: block;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    font-family: "Playfair Display", serif; }
+    @media (min-width: 30em) {
+      .heading-primary--sub {
+        font-size: 2rem; } }
+    @media (min-width: 48em) {
+      .heading-primary--sub {
+        font-size: 2.5rem; } }
 
 * {
   margin: 0;
@@ -50,12 +70,32 @@ html {
   @media (min-width: 48em) {
     .header__nav {
       margin: 0; } }
-  .header__logo {
-    height: 3rem; }
+  .header__logo-box {
+    height: 3rem;
+    display: flex; }
     @media (min-width: 48em) {
-      .header__logo {
+      .header__logo-box {
         height: 4rem;
         margin: 0 2rem; } }
+  .header__logo {
+    height: 100%;
+    border: none; }
+
+.hero {
+  background-image: linear-gradient(rgba(19, 19, 19, 0.3), rgba(19, 19, 19, 0.3)), url("https://res.cloudinary.com/zimniros-spam/image/upload/v1534673707/bUJtxNPc5Cw_uvo3gt.jpg");
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 70vh;
+  background-attachment: fixed;
+  margin-top: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+  @media (min-width: 48em) {
+    .hero {
+      margin-top: 0; } }
 
 .nav {
   position: relative;
@@ -64,6 +104,7 @@ html {
     .nav {
       height: 100%; } }
   .nav__button {
+    display: flex;
     border: none;
     outline: none;
     background-color: transparent;
@@ -90,8 +131,7 @@ html {
     bottom: 0;
     background: rgba(19, 19, 19, 0.9);
     justify-content: space-around;
-    align-items: center;
-    transition: all 0.2s ease-in; }
+    align-items: center; }
     @media (min-width: 48em) {
       .nav__list {
         height: 100%;
