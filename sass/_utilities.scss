@@ -2,10 +2,11 @@
   text-align: center;
 }
 
-.u-center-block {
+.u-container {
+  max-width: $max-width;
   margin: 0 auto;
 }
 
 .u-margin-bottom-small {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }

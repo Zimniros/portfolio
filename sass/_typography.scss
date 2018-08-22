@@ -1,7 +1,7 @@
 body {
   font-family: $font-family-basic;
   color: $color-black;
-  line-height: 1.7;
+  line-height: 1.5;
 }
 
 .heading-primary {
@@ -43,13 +43,18 @@ body {
 }
 
 .heading-secondary {
+  display: inline-block;
   font-size: 3.5rem;
-  line-height: 1.2;
+  line-height: 1.4;
+  color: $color-black;
   font-family: $font-family-heading;
+  border-bottom: 3px solid currentColor;
 }
 
 .paragraph {
   font-size: $default-font-size;
+  margin-bottom: 0.5rem;
+  color: currentColor;
 }
 
 // h1,

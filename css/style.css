@@ -1,11 +1,12 @@
 /* Colors */
+/* Podcast tune project colors */
 /* Typography */
 /* Space */
 /* Breakpoints */
 body {
   font-family: "Playfair Display", serif;
   color: #131313;
-  line-height: 1.7; }
+  line-height: 1.5; }
 
 .heading-primary {
   color: #fafafa;
@@ -37,12 +38,17 @@ body {
         font-size: 2.5rem; } }
 
 .heading-secondary {
+  display: inline-block;
   font-size: 3.5rem;
-  line-height: 1.2;
-  font-family: "Open Sans", sans-serif; }
+  line-height: 1.4;
+  color: #131313;
+  font-family: "Open Sans", sans-serif;
+  border-bottom: 3px solid currentColor; }
 
 .paragraph {
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  color: currentColor; }
 
 * {
   margin: 0;
@@ -60,15 +66,12 @@ html {
 .u-center-text {
   text-align: center; }
 
-.u-center-block {
+.u-container {
+  max-width: 98rem;
   margin: 0 auto; }
 
 .u-margin-bottom-small {
-  margin-bottom: 2rem; }
-
-.about {
-  padding: 4rem;
-  max-width: 98rem; }
+  margin-bottom: 3rem; }
 
 .header {
   position: fixed;
@@ -76,15 +79,15 @@ html {
   left: 0;
   background-color: #131313;
   height: 6rem;
-  width: 100%; }
+  width: 100%;
+  z-index: 10; }
   @media (min-width: 48em) {
     .header {
       position: relative; } }
-  .header__container {
+  .header__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 98rem;
     height: 100%; }
   .header__logo-box, .header__nav {
     margin: 0 1rem; }
@@ -118,6 +121,12 @@ html {
     .hero {
       margin-top: 0;
       height: 85vh; } }
+
+.about {
+  padding: 4rem 1rem; }
+
+.projects {
+  padding: 4rem 0rem; }
 
 .nav {
   position: relative;
@@ -201,3 +210,87 @@ html {
 
 .nav-is-open .nav__list {
   transform: translateX(0); }
+
+.project {
+  padding: 3rem 2rem; }
+  .project__wrapper {
+    display: flex;
+    flex-direction: column; }
+    @media (min-width: 61.25em) {
+      .project__wrapper {
+        flex-direction: row;
+        align-items: center; } }
+  .project__image-wrapper, .project__info {
+    min-height: 1px; }
+    @media (min-width: 61.25em) {
+      .project__image-wrapper, .project__info {
+        flex: 1 0 50%; } }
+  .project__image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+    box-shadow: 0 1rem 2rem rgba(19, 19, 19, 0.2); }
+    @media (min-width: 61.25em) {
+      .project__image {
+        margin-bottom: 0; } }
+  .project__info {
+    width: 100%; }
+    @media (min-width: 61.25em) {
+      .project__info {
+        padding: 0 2rem; } }
+  .project__name {
+    font-family: "Open Sans", sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem; }
+  .project__features-list {
+    list-style: none;
+    margin-bottom: 1rem; }
+  .project__feature {
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    position: relative; }
+    .project__feature::before {
+      content: "";
+      position: absolute;
+      top: 0.75rem;
+      left: 0;
+      width: 0.7rem;
+      height: 0.7rem;
+      border-radius: 50%;
+      background: currentColor; }
+  .project__tools-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem; }
+  .project__tools-item {
+    padding: 0.5rem 0.75rem;
+    border: 2px solid currentColor;
+    border-radius: 2px;
+    font-size: 1.4rem;
+    margin-bottom: 1rem; }
+    .project__tools-item:not(:last-of-type) {
+      margin-right: 1rem; }
+  .project__link {
+    display: inline-block; }
+    .project__link:link, .project__link:visited {
+      color: #fafafa;
+      text-decoration: none;
+      font-family: "Open Sans", sans-serif;
+      padding: 0.75rem 1rem;
+      border-radius: 2px;
+      border: 2px solid #fafafa;
+      font-size: 1.8rem;
+      box-shadow: 0 0.5rem 1rem rgba(19, 19, 19, 0.2); }
+    .project__link:hover {
+      box-shadow: 0 1rem 2rem rgba(19, 19, 19, 0.4); }
+    .project__link--live:link, .project__link--live:visited {
+      background: #fafafa;
+      color: #77d0ff; }
+    .project__link:not(:last-of-type) {
+      margin-right: 1rem; }
+
+#podcast-tune {
+  background: linear-gradient(#0091dd, #44beff);
+  color: #fafafa; }

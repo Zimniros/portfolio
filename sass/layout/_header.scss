@@ -5,16 +5,16 @@
   background-color: $color-black;
   height: $header-height;
   width: 100%;
+  z-index: 10;
 
   @include tablet {
     position: relative;
   }
 
-  &__container {
+  &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: $max-width;
     height: 100%;
   }
 

@@ -1,0 +1,133 @@
+.project {
+  padding: 3rem 2rem;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @include laptop {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+  &__image-wrapper,
+  &__info {
+    min-height: 1px; //IE11
+    @include laptop {
+      flex: 1 0 50%;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+    @include laptop {
+      margin-bottom: 0;
+    }
+  }
+
+  &__info {
+    width: 100%;
+
+    @include laptop {
+      padding: 0 2rem;
+    }
+  }
+
+  &__name {
+    font-family: $font-family-heading;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  &__description {
+  }
+
+  &__features-list {
+    list-style: none;
+    margin-bottom: 1rem;
+  }
+
+  &__feature {
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0.75rem;
+      left: 0;
+
+      width: 0.7rem;
+      height: 0.7rem;
+      border-radius: 50%;
+      background: currentColor;
+    }
+  }
+
+  &__tools-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+
+  &__tools-item {
+    padding: 0.5rem 0.75rem;
+    border: 2px solid currentColor;
+    border-radius: 2px;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+
+    &:not(:last-of-type) {
+      margin-right: 1rem;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+
+    &:link,
+    &:visited {
+      color: $color-white;
+      text-decoration: none;
+      font-family: $font-family-heading;
+      padding: 0.75rem 1rem;
+      border-radius: 2px;
+      border: 2px solid $color-white;
+      font-size: 1.8rem;
+
+      box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+    }
+
+    &:hover {
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.4);
+    }
+
+    &--live {
+      &:link,
+      &:visited {
+        background: $color-white;
+        color: $color-light-blue;
+      }
+    }
+
+    &:not(:last-of-type) {
+      margin-right: 1rem;
+    }
+  }
+}
+
+#podcast-tune {
+  background: linear-gradient(
+    darken($color-light-blue, 30%),
+    darken($color-light-blue, 10%)
+  );
+  color: $color-white;
+}
