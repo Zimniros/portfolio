@@ -1,9 +1,10 @@
 /* Colors */
-/* Font Families */
+/* Typography */
 /* Space */
 /* Breakpoints */
 body {
   font-family: "Playfair Display", serif;
+  color: #131313;
   line-height: 1.7; }
 
 .heading-primary {
@@ -35,6 +36,14 @@ body {
       .heading-primary--sub {
         font-size: 2.5rem; } }
 
+.heading-secondary {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  font-family: "Open Sans", sans-serif; }
+
+.paragraph {
+  font-size: 1.6rem; }
+
 * {
   margin: 0;
   padding: 0; }
@@ -47,6 +56,19 @@ body {
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+
+.u-center-text {
+  text-align: center; }
+
+.u-center-block {
+  margin: 0 auto; }
+
+.u-margin-bottom-small {
+  margin-bottom: 2rem; }
+
+.about {
+  padding: 4rem;
+  max-width: 98rem; }
 
 .header {
   position: fixed;
@@ -63,8 +85,7 @@ html {
     justify-content: space-between;
     align-items: center;
     max-width: 98rem;
-    height: 100%;
-    margin: 0 auto; }
+    height: 100%; }
   .header__logo-box, .header__nav {
     margin: 0 1rem; }
   @media (min-width: 48em) {
@@ -95,7 +116,8 @@ html {
   text-align: center; }
   @media (min-width: 48em) {
     .hero {
-      margin-top: 0; } }
+      margin-top: 0;
+      height: 85vh; } }
 
 .nav {
   position: relative;
