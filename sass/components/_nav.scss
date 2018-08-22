@@ -73,7 +73,7 @@
 
   &__item {
     @include tablet {
-      border-bottom: 2px solid transparent;
+      border-bottom: 3px solid transparent;
 
       &:not(:last-child) {
         margin-right: 2rem;
@@ -85,7 +85,7 @@
 
       @include tablet {
         background: transparent;
-        border-bottom: 2px solid $color-white;
+        border-bottom: 3px solid $color-white;
       }
     }
   }

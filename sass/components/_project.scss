@@ -54,9 +54,6 @@
     font-size: 2.5rem;
   }
 
-  &__description {
-  }
-
   &__features-list {
     list-style: none;
     margin-left: 1rem;
@@ -107,14 +104,19 @@
     &:visited {
       color: $color-white;
       text-decoration: none;
-      padding: 0.75rem 1rem;
+      padding: 0.5rem 0.75rem;
       border-radius: 2px;
       border: 1px solid $color-white;
-      font-size: 2rem;
+      font-size: 1.8rem;
       font-weight: bold;
       transition: all 0.3s;
 
       box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+
+      @include large-phone {
+        padding: 0.75rem 1rem;
+        font-size: 2.1rem;
+      }
     }
 
     &:hover {
@@ -124,16 +126,25 @@
     }
 
     &:not(:last-of-type) {
-      margin-right: 1rem;
+      margin-right: 0.5rem;
+
+      @include large-phone {
+        margin-right: 1rem;
+      }
     }
   }
 
   &__link-icon {
     display: inline-block;
     fill: currentColor;
-    height: 3rem;
-    width: 3rem;
+    height: 2rem;
+    width: 2rem;
     margin-left: 0.5rem;
+
+    @include large-phone {
+      height: 3rem;
+      width: 3rem;
+    }
   }
 }
 

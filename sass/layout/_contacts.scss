@@ -1,0 +1,51 @@
+.contacts {
+  padding: 8rem 0;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+    }
+
+    &:not(:last-of-type) {
+      margin-right: 2rem;
+
+      @include tablet {
+        margin-right: 3rem;
+      }
+
+      @include laptop {
+        margin-right: 4rem;
+      }
+    }
+  }
+
+  &__icon {
+    width: 3rem;
+    height: 3rem;
+    fill: $color-black;
+
+    @include large-phone {
+      width: 4rem;
+      height: 4rem;
+    }
+
+    @include tablet {
+      width: 5.5rem;
+      height: 5.5rem;
+    }
+
+    @include laptop {
+      width: 7rem;
+      height: 7rem;
+    }
+  }
+}
