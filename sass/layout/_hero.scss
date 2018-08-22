@@ -14,7 +14,8 @@
 
   @include tablet {
     margin-top: 0;
-    height: 85vh;
+    height: 95vh;
+    margin-top: -$header-height;
   }
 
   display: flex;

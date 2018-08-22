@@ -1,5 +1,17 @@
 .project {
-  padding: 3rem 2rem;
+  padding: 6rem 2rem;
+
+  @include large-phone {
+    padding: 8rem 3rem;
+  }
+
+  @include tablet {
+    padding: 10rem 4rem;
+  }
+
+  @include laptop {
+    padding: 12rem 4rem;
+  }
 
   &__wrapper {
     display: flex;
@@ -34,14 +46,12 @@
     width: 100%;
 
     @include laptop {
-      padding: 0 2rem;
+      padding: 0 3rem;
     }
   }
 
   &__name {
-    font-family: $font-family-heading;
     font-size: 2.5rem;
-    margin-bottom: 1rem;
   }
 
   &__description {
@@ -49,13 +59,13 @@
 
   &__features-list {
     list-style: none;
-    margin-bottom: 1rem;
+    margin-left: 1rem;
   }
 
   &__feature {
     padding-left: 1.5rem;
     margin-bottom: 0.5rem;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     position: relative;
 
     &::before {
@@ -75,12 +85,11 @@
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 2rem;
   }
 
   &__tools-item {
     padding: 0.5rem 0.75rem;
-    border: 2px solid currentColor;
+    border: 1px solid currentColor;
     border-radius: 2px;
     font-size: 1.4rem;
     margin-bottom: 1rem;
@@ -91,36 +100,40 @@
   }
 
   &__link {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
 
     &:link,
     &:visited {
       color: $color-white;
       text-decoration: none;
-      font-family: $font-family-heading;
       padding: 0.75rem 1rem;
       border-radius: 2px;
-      border: 2px solid $color-white;
-      font-size: 1.8rem;
+      border: 1px solid $color-white;
+      font-size: 2rem;
+      font-weight: bold;
+      transition: all 0.3s;
 
       box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
     }
 
     &:hover {
       box-shadow: 0 1rem 2rem rgba($color-black, 0.4);
-    }
-
-    &--live {
-      &:link,
-      &:visited {
-        background: $color-white;
-        color: $color-light-blue;
-      }
+      background: $color-white;
+      color: $color-light-blue;
     }
 
     &:not(:last-of-type) {
       margin-right: 1rem;
     }
+  }
+
+  &__link-icon {
+    display: inline-block;
+    fill: currentColor;
+    height: 3rem;
+    width: 3rem;
+    margin-left: 0.5rem;
   }
 }
 

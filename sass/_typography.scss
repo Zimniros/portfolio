@@ -2,6 +2,7 @@ body {
   font-family: $font-family-basic;
   color: $color-black;
   line-height: 1.5;
+  letter-spacing: 1px;
 }
 
 .heading-primary {
@@ -13,8 +14,8 @@ body {
   &--main {
     display: block;
     font-size: 3rem;
+    font-weight: bold;
     line-height: 1.2;
-    font-family: $font-family-heading;
 
     @include large-phone {
       font-size: 5rem;
@@ -30,7 +31,7 @@ body {
     font-size: 1.6rem;
     line-height: 1.4;
     letter-spacing: 1px;
-    font-family: $font-family-basic;
+    font-weight: normal;
 
     @include large-phone {
       font-size: 2rem;
@@ -46,8 +47,8 @@ body {
   display: inline-block;
   font-size: 3.5rem;
   line-height: 1.4;
+  font-weight: bold;
   color: $color-black;
-  font-family: $font-family-heading;
   border-bottom: 3px solid currentColor;
 }
 

@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:800|Playfair+Display" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <!-- <link rel="shortcut icon" type="image/png" href="img/favicon.png"> -->
 
@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="header" id="header">
     <div class="header__wrapper u-container">
       <a href="https://www.antonzimnitski.com/" class="header__logo-box">
         <img src="img/logo.svg" alt="Anton Zimnitski logo" class="header__logo">
@@ -65,7 +65,7 @@
 
   <section class="about u-container" id="about">
     <div class="u-center-text">
-      <div class="u-margin-bottom-small">
+      <div class="u-margin-bottom-large">
         <h2 class="heading-secondary">About</h2>
       </div>
       <p class="paragraph">
@@ -77,29 +77,29 @@
   </section>
 
   <section class="projects" id="projects">
-    <div class="u-center-text u-margin-bottom-small">
+    <div class="u-center-text u-margin-bottom-large">
       <h2 class="heading-secondary">Projects</h2>
     </div>
 
     <div class="project" id="podcast-tune">
       <div class="project__wrapper u-container">
         <div class="project__image-wrapper">
-        <img src="https://res.cloudinary.com/zimniros-spam/image/upload/v1534938783/podcast-tune_v7gjai.png" alt="Podcast Tune screenshot"
-          class="project__image">
+          <img src="https://res.cloudinary.com/zimniros-spam/image/upload/v1534938783/podcast-tune_v7gjai.png" alt="Podcast Tune screenshot"
+            class="project__image">
         </div>
         <div class="project__info">
-          <h3 class="project__name">Podcast Tune</h3>
+          <h3 class="project__name u-margin-bottom-medium">Podcast Tune</h3>
           <div class="project__description">
-            <p class="paragraph">A Web application for listening and discovering podcasts.</p>
+            <p class="paragraph u-margin-bottom-small">A Web application for listening and discovering podcasts.</p>
             <p class="paragraph">Main features:</p>
-            <ul class="project__features-list">
+            <ul class="project__features-list u-margin-bottom-medium">
               <li class="project__feature">You can browse, search and subscribe to podcasts.</li>
               <li class="project__feature">Play episodes, add them to Up next, mark them as played and add them to favorites.</li>
               <li class="project__feature">In player you can increase/decrease volume and playback speed, skip time and browse episode in Up next.</li>
               <li class="project__feature">For registered users all information stores in application database, for 'guests' - in local storage.</li>
             </ul>
             <p class="paragraph">Build with:</p>
-            <ul class="project__tools-list">
+            <ul class="project__tools-list u-margin-bottom-medium">
               <li class="project__tools-item">React</li>
               <li class="project__tools-item">Meteor</li>
               <li class="project__tools-item">Apollo</li>
@@ -109,8 +109,18 @@
             </ul>
 
             <div class="project__links">
-              <a href="https://podcast-tune.herokuapp.com" class="project__link project__link--live" target="_blank">Heroku</a>
-              <a href="https://github.com/Zimniros/PodcastTune" class="project__link project__link--github" target="_blank">GitHub</a>
+              <a href="https://podcast-tune.herokuapp.com" class="project__link project__link--live" target="_blank">
+                <span>Heroku </span>
+                <svg class="project__link-icon">
+                  <use xlink:href="img/sprite.svg#icon-new-tab"></use>
+                </svg>
+              </a>
+              <a href="https://github.com/Zimniros/PodcastTune" class="project__link project__link--github" target="_blank">
+                <span>GitHub </span>
+                <svg class="project__link-icon">
+                  <use xlink:href="img/sprite.svg#icon-github"></use>
+                </svg>
+              </a>
             </div>
           </div>
         </div>
@@ -118,6 +128,7 @@
     </div>
 
   </section>
+
 
   <script src="js/scripts.js"></script>
 

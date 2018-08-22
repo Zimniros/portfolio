@@ -31,7 +31,7 @@
 
   &__list {
     display: flex;
-    transform: translateX(-100%);
+    transform: translateY(-150%);
     margin: 0;
     padding: 0;
     list-style: none;
@@ -44,14 +44,17 @@
     background: rgba($color-black, 0.9);
     justify-content: space-around;
     align-items: center;
+    transition: all 0.3s;
+    z-index: -1;
 
     @include tablet {
       height: 100%;
       flex-direction: row;
       position: relative;
-      transform: translateX(0);
+      transform: translateY(0);
       top: 0;
       background: transparent;
+      z-index: 1;
     }
   }
 

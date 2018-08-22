@@ -2,13 +2,14 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: $color-black;
+  background: $color-black;
   height: $header-height;
   width: 100%;
   z-index: 10;
 
   @include tablet {
     position: relative;
+    background: transparent;
   }
 
   &__wrapper {
@@ -20,7 +21,7 @@
 
   &__logo-box,
   &__nav {
-    margin: 0 1rem;
+    margin: 0 2rem;
   }
 
   &__nav {
@@ -42,5 +43,12 @@
   &__logo {
     height: 100%;
     border: none;
+  }
+}
+
+.sticky-header .header {
+  @include tablet {
+    position: fixed;
+    background: rgba($color-black, 0.9);
   }
 }
