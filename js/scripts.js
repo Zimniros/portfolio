@@ -4,14 +4,14 @@ var header = document.getElementById("header");
 var headerHeight = header.offsetHeight;
 
 var navLinks = document.querySelectorAll("a.nav__link");
-const navLinksElements = [].slice.call(navLinks);
+var navLinksElements = [].slice.call(navLinks);
 
 navToogle.addEventListener("click", function() {
   document.body.classList.toggle("nav-is-open");
 });
 
 window.addEventListener("scroll", function() {
-  if (window.scrollY >= headerHeight) {
+  if (window.pageYOffset >= headerHeight) {
     document.body.classList.add("sticky-header");
   } else {
     document.body.classList.remove("sticky-header");
