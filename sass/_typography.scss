@@ -1,23 +1,21 @@
 body {
-  font-family: $font-family-basic;
-  color: $color-black;
-  line-height: 1.5;
   letter-spacing: 1px;
+  color: $color-black;
+  font-family: $font-family-basic;
+  line-height: 1.5;
 }
 
 .heading-primary {
-  color: $color-white;
-  backface-visibility: hidden;
   margin-bottom: 6rem;
   user-select: none;
+  color: $color-white;
+  backface-visibility: hidden;
 
   &--main {
     display: block;
     font-size: 3rem;
     font-weight: bold;
     line-height: 1.2;
-
-    animation: moveInLeft 1s ease-out;
 
     @include large-phone {
       font-size: 5rem;
@@ -30,12 +28,10 @@ body {
 
   &--sub {
     display: block;
-    font-size: 1.6rem;
-    line-height: 1.4;
     letter-spacing: 1px;
+    font-size: 1.6rem;
     font-weight: normal;
-
-    animation: moveInRight 1s ease-out;
+    line-height: 1.4;
 
     @include large-phone {
       font-size: 2rem;
@@ -49,26 +45,15 @@ body {
 
 .heading-secondary {
   display: inline-block;
-  font-size: 3.5rem;
-  line-height: 1.4;
-  font-weight: bold;
   color: $color-black;
   border-bottom: 3px solid currentColor;
+  font-size: 3.5rem;
+  font-weight: bold;
+  line-height: 1.4;
 }
 
 .paragraph {
-  font-size: $default-font-size;
   margin-bottom: 0.5rem;
   color: currentColor;
+  font-size: $default-font-size;
 }
-
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6 {
-//   font-family: "Open Sans", sans-serif;
-//   letter-spacing: -2px;
-//   line-height: 1.2;
-// }

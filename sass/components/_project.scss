@@ -18,10 +18,11 @@
     flex-direction: column;
 
     @include laptop {
-      flex-direction: row;
       align-items: center;
+      flex-direction: row;
     }
   }
+
   &__image-wrapper,
   &__info {
     min-height: 1px; //IE11
@@ -34,7 +35,6 @@
     width: 100%;
     height: auto;
     margin-bottom: 2rem;
-
     box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
 
     @include laptop {
@@ -55,41 +55,40 @@
   }
 
   &__features-list {
-    list-style: none;
     margin-left: 1rem;
+    list-style: none;
   }
 
   &__feature {
-    padding-left: 1.5rem;
-    margin-bottom: 0.5rem;
-    font-size: 1.6rem;
     position: relative;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    font-size: 1.6rem;
 
     &::before {
-      content: "";
       position: absolute;
       top: 0.75rem;
       left: 0;
-
       width: 0.7rem;
       height: 0.7rem;
+      content: "";
       border-radius: 50%;
       background: currentColor;
     }
   }
 
   &__tools-list {
-    list-style: none;
     display: flex;
     flex-wrap: wrap;
+    list-style: none;
   }
 
   &__tools-item {
+    margin-bottom: 1rem;
     padding: 0.5rem 0.75rem;
     border: 1px solid currentColor;
     border-radius: 2px;
     font-size: 1.4rem;
-    margin-bottom: 1rem;
 
     &:not(:last-of-type) {
       margin-right: 1rem;
@@ -102,16 +101,15 @@
 
     &:link,
     &:visited {
-      color: $color-white;
-      text-decoration: none;
       padding: 0.5rem 0.75rem;
-      border-radius: 2px;
+      transition: all 0.3s;
+      text-decoration: none;
+      color: $color-white;
       border: 1px solid $color-white;
+      border-radius: 2px;
+      box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
       font-size: 1.8rem;
       font-weight: bold;
-      transition: all 0.3s;
-
-      box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
 
       @include large-phone {
         padding: 0.75rem 1rem;
@@ -120,9 +118,9 @@
     }
 
     &:hover {
-      box-shadow: 0 1rem 2rem rgba($color-black, 0.4);
-      background: $color-white;
       color: $color-light-blue;
+      background: $color-white;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.4);
     }
 
     &:not(:last-of-type) {
@@ -136,22 +134,22 @@
 
   &__link-icon {
     display: inline-block;
-    fill: currentColor;
-    height: 2rem;
     width: 2rem;
+    height: 2rem;
     margin-left: 0.5rem;
+    fill: currentColor;
 
     @include large-phone {
-      height: 3rem;
       width: 3rem;
+      height: 3rem;
     }
   }
 }
 
 #podcast-tune {
+  color: $color-white;
   background: linear-gradient(
     darken($color-light-blue, 30%),
     darken($color-light-blue, 10%)
   );
-  color: $color-white;
 }

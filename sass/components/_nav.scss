@@ -8,10 +8,10 @@
 
   &__button {
     display: flex;
+    cursor: pointer;
     border: none;
     outline: none;
     background-color: transparent;
-    cursor: pointer;
 
     @include tablet {
       display: none;
@@ -20,7 +20,6 @@
 
   &__open-icon,
   &__close-icon {
-    // width: 3rem;
     height: 2rem;
     fill: $color-white;
   }
@@ -30,31 +29,31 @@
   }
 
   &__list {
+    position: fixed;
+    z-index: -1;
+    top: $header-height;
+    right: 0;
+    bottom: 0;
+    left: 0;
     display: flex;
-    transform: translateY(-150%);
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
     margin: 0;
     padding: 0;
     list-style: none;
-    flex-direction: column;
-    position: fixed;
-    top: $header-height;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba($color-black, 0.9);
-    justify-content: space-around;
-    align-items: center;
     transition: all 0.3s;
-    z-index: -1;
+    transform: translateY(-150%);
+    background: rgba($color-black, 0.9);
 
     @include tablet {
-      height: 100%;
-      flex-direction: row;
       position: relative;
-      transform: translateY(0);
-      top: 0;
-      background: transparent;
       z-index: 1;
+      top: 0;
+      flex-direction: row;
+      height: 100%;
+      transform: translateY(0);
+      background: transparent;
     }
   }
 
@@ -63,8 +62,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
     width: 100%;
+    height: 100%;
 
     @include tablet {
       width: auto;
@@ -86,8 +85,8 @@
       background: rgba($color-white, 0.2);
 
       @include tablet {
-        background: transparent;
         border-bottom: 3px solid $color-white;
+        background: transparent;
       }
     }
   }
@@ -95,14 +94,14 @@
   &__link {
     &:link,
     &:visited {
-      font-family: serif;
-      font-size: 3.5rem;
       text-decoration: none;
       color: $color-white;
+      font-family: serif;
+      font-size: 3.5rem;
 
       @include tablet {
-        font-size: 2rem;
         padding: 0 2rem;
+        font-size: 2rem;
       }
     }
   }

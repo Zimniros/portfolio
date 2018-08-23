@@ -4,10 +4,10 @@
 
   &__list {
     display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 1rem;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 1rem;
   }
 
   &__link {
