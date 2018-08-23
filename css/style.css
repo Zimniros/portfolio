@@ -18,7 +18,8 @@ body {
     display: block;
     font-size: 3rem;
     font-weight: bold;
-    line-height: 1.2; }
+    line-height: 1.2;
+    animation: moveInLeft 1s ease-out; }
     @media (min-width: 30em) {
       .heading-primary--main {
         font-size: 5rem; } }
@@ -30,7 +31,8 @@ body {
     font-size: 1.6rem;
     line-height: 1.4;
     letter-spacing: 1px;
-    font-weight: normal; }
+    font-weight: normal;
+    animation: moveInRight 1s ease-out; }
     @media (min-width: 30em) {
       .heading-primary--sub {
         font-size: 2rem; } }
@@ -62,7 +64,8 @@ body {
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  overflow-x: hidden; }
 
 .u-center-text {
   text-align: center; }
@@ -79,6 +82,26 @@ html {
 
 .u-margin-bottom-large {
   margin-bottom: 5rem; }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
 .contacts {
   padding: 8rem 0; }
@@ -154,7 +177,7 @@ html {
     background: rgba(19, 19, 19, 0.9); } }
 
 .hero {
-  background-image: linear-gradient(rgba(19, 19, 19, 0.3), rgba(19, 19, 19, 0.3)), url("https://res.cloudinary.com/zimniros-spam/image/upload/v1534673707/bUJtxNPc5Cw_uvo3gt.jpg");
+  background-image: linear-gradient(rgba(19, 19, 19, 0.3), rgba(19, 19, 19, 0.3)), url("https://res.cloudinary.com/zimniros/image/upload/v1535017288/Portfolio/hero.jpg");
   background-size: cover;
   background-position: center center;
   width: 100%;
@@ -237,17 +260,19 @@ html {
     @media (min-width: 48em) {
       .nav__item, .nav__link {
         width: auto; } }
-  @media (min-width: 48em) {
-    .nav__item {
-      border-bottom: 3px solid transparent; }
-      .nav__item:not(:last-child) {
-        margin-right: 2rem; } }
-  .nav__item:hover {
-    background: rgba(250, 250, 250, 0.2); }
+  .nav__item {
+    transition: all 0.2s; }
     @media (min-width: 48em) {
-      .nav__item:hover {
-        background: transparent;
-        border-bottom: 3px solid #fafafa; } }
+      .nav__item {
+        border-bottom: 3px solid transparent; }
+        .nav__item:not(:last-child) {
+          margin-right: 2rem; } }
+    .nav__item:hover {
+      background: rgba(250, 250, 250, 0.2); }
+      @media (min-width: 48em) {
+        .nav__item:hover {
+          background: transparent;
+          border-bottom: 3px solid #fafafa; } }
   .nav__link:link, .nav__link:visited {
     font-family: serif;
     font-size: 3.5rem;

@@ -37,16 +37,16 @@
 
         <ul class="nav__list">
           <li class="nav__item">
-            <a href="#hero" class="nav__link">Home</a>
+            <a data-scroll href="#hero" class="nav__link">Home</a>
           </li>
           <li class="nav__item">
-            <a href="#about" class="nav__link">About</a>
+            <a data-scroll href="#about" class="nav__link">About</a>
           </li>
           <li class="nav__item">
-            <a href="#projects" class="nav__link">Projects</a>
+            <a data-scroll href="#projects" class="nav__link">Projects</a>
           </li>
           <li class="nav__item">
-            <a href="#contacts" class="nav__link">Contacts</a>
+            <a data-scroll href="#contacts" class="nav__link">Contacts</a>
           </li>
         </ul>
 
@@ -84,8 +84,14 @@
     <div class="project" id="podcast-tune">
       <div class="project__wrapper u-container">
         <div class="project__image-wrapper">
-          <img src="https://res.cloudinary.com/zimniros-spam/image/upload/v1534938783/podcast-tune_v7gjai.png" alt="Podcast Tune screenshot"
-            class="project__image">
+          <picture >
+            <source srcset="https://res.cloudinary.com/zimniros/image/upload/c_scale,q_100,w_1365/v1535017288/Portfolio/podcast-tune.png" media="(min-width: 61.25em)">
+            <source srcset="https://res.cloudinary.com/zimniros/image/upload/c_scale,q_100,w_980/v1535017288/Portfolio/podcast-tune.png" media="(min-width: 48em)">
+            <source srcset="https://res.cloudinary.com/zimniros/image/upload/c_scale,q_100,w_768/v1535019693/Portfolio/podcast-tune.png" media="(min-width: 30em)">
+            <source srcset="https://res.cloudinary.com/zimniros/image/upload/c_scale,q_100,w_480/v1535019693/Portfolio/podcast-tune.png" media="(min-width: 17.5em)">
+            <img src="https://res.cloudinary.com/zimniros/image/upload/q_100/v1535019693/Portfolio/podcast-tune.png" alt="Podcast Tune screenshot" class="project__image">
+          </picture>
+
         </div>
         <div class="project__info">
           <h3 class="project__name u-margin-bottom-medium">Podcast Tune</h3>
@@ -167,7 +173,9 @@
   <footer class="footer">
     <p class="paragraph u-center-text">&copy; 2018 by Anton Zimnitski</p>
   </footer>
-
+  
+  <script src="js/svgxuse.min.js"></script>
+  <script src="js/smooth-scroll.polyfills.min.js"></script>
   <script src="js/scripts.js"></script>
 
 </body>

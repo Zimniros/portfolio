@@ -17,6 +17,8 @@ body {
     font-weight: bold;
     line-height: 1.2;
 
+    animation: moveInLeft 1s ease-out;
+
     @include large-phone {
       font-size: 5rem;
     }
@@ -32,6 +34,8 @@ body {
     line-height: 1.4;
     letter-spacing: 1px;
     font-weight: normal;
+
+    animation: moveInRight 1s ease-out;
 
     @include large-phone {
       font-size: 2rem;

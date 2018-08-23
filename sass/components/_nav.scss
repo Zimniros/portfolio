@@ -72,6 +72,8 @@
   }
 
   &__item {
+    transition: all 0.2s;
+
     @include tablet {
       border-bottom: 3px solid transparent;
 
